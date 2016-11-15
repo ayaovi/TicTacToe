@@ -32,8 +32,6 @@ public class TicTacToe extends Application
 		// gridpane.getColumnConstraints().add(new ColumnConstraints(100)); // column 1 is 100 wide
 		// gridpane.getColumnConstraints().add(new ColumnConstraints(200)); // column 2 is 200 wide
 
-		Grid3x3 mini_grid = new Grid3x3(50);
-
 		GridPane root = new GridPane();
 		// StackPane root = new StackPane();
 		// root.getRowConstraints().add(new RowConstraints(155));
@@ -42,18 +40,18 @@ public class TicTacToe extends Application
 		root.setHgap(3.0);
 		root.setVgap(3.0);
 
-		root.add(new Grid3x3(50), 0, 0);
-		root.add(new Grid3x3(50), 1, 0);
-		root.add(new Grid3x3(50), 2, 0);
-		root.add(new Grid3x3(50), 0, 1);
-		root.add(new Grid3x3(50), 1, 1);
-		root.add(new Grid3x3(50), 2, 1);
-		root.add(new Grid3x3(50), 0, 2);
-		root.add(new Grid3x3(50), 1, 2);
-		root.add(new Grid3x3(50), 2, 2);
+		root.add(new Grid3x3(50, 0), 0, 0);
+		root.add(new Grid3x3(50, 1), 1, 0);
+		root.add(new Grid3x3(50, 2), 2, 0);
+		root.add(new Grid3x3(50, 3), 0, 1);
+		root.add(new Grid3x3(50, 4), 1, 1);
+		root.add(new Grid3x3(50, 5), 2, 1);
+		root.add(new Grid3x3(50, 6), 0, 2);
+		root.add(new Grid3x3(50, 7), 1, 2);
+		root.add(new Grid3x3(50, 8), 2, 2);
 		// root.getChildren().add(mini_grid);
 
-		Scene main_scene = new Scene(root, 306, 306);
+		Scene main_scene = new Scene(root, 474, 474);
 
 		primaryStage.setTitle("TicTacToe it is !?");
 		primaryStage.setScene(main_scene);
